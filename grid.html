@@ -12,7 +12,11 @@
     <style>
         @media (min-width:600px) {
             #header-row {
-                height: 280px;
+                /* height: 80px; */
+              font-size: 80px;
+              background-color: rebeccapurple;
+              font-family: 'Courier New', Courier, monospace;
+            
             }
         }
         @media (max-width:600px) {
@@ -27,13 +31,13 @@
 
     <div class="container">
       <div class = "row">
-        <div class="col-12 col-md-12">
+        <div class="col-12 col-md-12 text-center text-light" id="header-row">
           Header
         </div> 
       </div>
       <div class = "row">
           <div class="col-12">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Navbar</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,9 +49,13 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="https://www.licg.nl/katten/perzisch-langhaar/" target="blank">Perzisch langhaar?</a>
                   </li>
                   
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Link</a>
+                  </li>
+
                 </ul>
                 <form class="d-flex">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -57,24 +65,29 @@
             </div>
             </nav>
           </div>
-        </div>
-
-      <div class="row">
+      </div>
+      <div class="row my-2">
         <div class="col-12">
-          introductie
+          Deze website gaat over katten!
         </div>
       </div>
       <div class="row">
         <div class="col-12 col-md-6">
-            Foto
+          <img src="kat1.jpg" class="img-fluid" alt="...">
         </div>
         <div class="col-12 col-md-6">
             Weetje
         </div>
       </div>
-      <div class="row">
-          <div class="col-12">
-              relevante informatie
+      <div class="row mt-3" >
+          <div class="col-4 text-center" >
+            relevante informatie
+          </div>
+          <div class="col-4 text-center" >
+            relevante informatie
+          </div>
+          <div class="col-4 text-center" >
+            relevante informatie
           </div>
       </div>
     </div>
