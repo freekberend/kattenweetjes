@@ -76,7 +76,11 @@
           <img src="kat1.jpg" class="img-fluid" alt="...">
         </div>
         <div class="col-12 col-md-6">
-            Weetje
+            <span id="mycatfact"></span>
+            <button type="button" class="btn btn-success" onclick="haalCatFactOp()">Actie</button>
+            <button type="button" class="btn btn-primary" onclick="haalAlleCatFactsOp()">Actie</button>
+
+            <table class="table table-dark" id="cat-facts-table"></table>
         </div>
       </div>
       <div class="row mt-3" >
@@ -91,6 +95,37 @@
           </div>
       </div>
     </div>
+
+    <script>
+      function haalCatFactOp(){
+
+        setTimeout(() => {
+        fetch("https://catfact.ninja/fact").then(response => response.json()).then(data => {
+          document.getElementById("mycatfact").innerText = data.fact;
+        })
+        }, 1000)
+      }
+      function haalAlleCatFactsOp() {
+        fetch("https://catfact.ninja/facts").then(response => response.json()).then(catfacts => {
+          catfacts.data.forEach(element => {
+            console.log(element);
+            document.getElementById("cat-facts-table").innerHTML += `
+              <tr>
+                <td>
+                  ${element.fact}
+                </td>
+              </tr>
+            `;
+          });
+        })
+      }
+
+
+      
+
+
+
+    </script>
   
 
 </body>
